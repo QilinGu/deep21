@@ -23,7 +23,7 @@ requests = BitTransferRequests(wallet, username)
 # Comment this line to not use my server
 @click.option('--server', default='10.254.18.23:5000', help='ip:port to connect to')
 @click.argument('img_url', required=False)
-def cli(model, img_url):
+def cli(model, server, img_url):
     if model not in MODELS:
         click.echo('Error: Invalid model chosen')
         return

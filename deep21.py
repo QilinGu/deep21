@@ -18,12 +18,18 @@ requests = BitTransferRequests(wallet, username)
 
 @click.command()
 @click.option('--model', default='coco', help='Deep learning model to use: coco (captioning trained on COCO dataset), wikipedia (captioning trained on Wikipedia dataset), scene (scene classification using SUN dataset labels)')
-@click.option('--server', default='localhost:5000', help='ip:port to connect to')
-@click.argument('img_url')
+# Uncomment this line to use your own server
+# @click.option('--server', default='localhost:5000', help='ip:port to connect to')
+# Comment this line to not use my server
+@click.option('--server', default='10.254.18.23:5000', help='ip:port to connect to')
+@click.argument('img_url', required=False)
 def cli(model, img_url):
     if model not in MODELS:
         click.echo('Error: Invalid model chosen')
         return
+
+    if not img_url:
+        img_url = click.get_text_stream('stdin').read()
 
     # Send request to server with user input text and user's wallet address for payment
     sel_url = 'http://{}/deep?model={}&img_url={}&payout_address={}'

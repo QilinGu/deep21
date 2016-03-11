@@ -25,8 +25,8 @@ Scene classification using SUN dataset labels and scraped images
 
 `python3 deep21.py --model scene https://golfcourse.stanford.edu/images_Dost/Dost10d1000.jpg`
 
-> [{'class': 'park', 'loglikelihood': '-0.83919325801699'},
->  {'class': 'golf_course', 'loglikelihood': '-1.4066264219261'},
->  {'class': 'campsite', 'loglikelihood': '-2.1477187870691'},
->  {'class': 'sand_trap', 'loglikelihood': '-2.7732145139539'},
->  {'class': 'mountain_snowy', 'loglikelihood': '-3.3946510286202'}]
+> `[{'class': 'park', 'loglikelihood': '-0.83919325801699'},`
+> ` {'class': 'golf_course', 'loglikelihood': '-1.4066264219261'},`
+> ` {'class': 'campsite', 'loglikelihood': '-2.1477187870691'},`
+> ` {'class': 'sand_trap', 'loglikelihood': '-2.7732145139539'},`
+> ` {'class': 'mountain_snowy', 'loglikelihood': '-3.3946510286202'}]`

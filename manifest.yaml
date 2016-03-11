@@ -1,6 +1,6 @@
 info:
   title: Deep Learning Image Captioning and Scene Classification
-  description: Bitcoin-payable deep learning services for image captioning and scene classification. 
+  description: Bitcoin-payable deep learning services for image captioning and scene classification. https://github.com/clu8/deep21
   x-21-quick-buy: "python3 deep21.py --server 10.254.18.23:5000 --model coco https://upload.wikimedia.org/wikipedia/commons/b/bb/Kittyply_edit1.jpg"
   x-21-category: utilities
   x-21-app-image: http://www.wired.com/wp-content/uploads/2015/05/531847175-feat-1024x512.jpg

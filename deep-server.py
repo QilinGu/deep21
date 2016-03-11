@@ -20,6 +20,11 @@ MODEL_ID = {'coco': 5090,
              'wikipedia': 5104,
              'scene': 5291}
 
+# set up server sie wallet
+app = Flask(__name__)
+wallet = Wallet()
+payment = Payment(app, wallet)
+
 @app.route('/deep')
 @payment.required(1000)
 def deep():

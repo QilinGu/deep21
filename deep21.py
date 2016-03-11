@@ -37,3 +37,6 @@ def cli(model, server, img_url):
 
     # Print the caption/classification out to the terminal
     click.echo(response.text)
+
+if __name__ == '__main__':
+    cli()

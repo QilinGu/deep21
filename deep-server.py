@@ -5,6 +5,7 @@ deep21 server
 from flask import Flask, request
 import requests
 import pprint
+import yaml, json
 
 from two1.lib.wallet import Wallet
 from two1.lib.bitserv.flask import Payment
@@ -43,6 +44,15 @@ def deep():
         return r['caption']
     else:
         return pprint.pformat(r['results'])
+
+@app.route('/manifest')
+def docs():
+    '''
+    Serves the manifest to the 21 crawler.
+    '''
+    with open('manifest.yaml', 'r') as f:
+        manifest_yaml = yaml.load(f)
+    return json.dumps(manifest_yaml)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)

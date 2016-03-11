@@ -1,5 +1,6 @@
 # deep21
 Bitcoin-payable deep learning services for image captioning and scene classification. 
+
 *Charles Lu (charleslu@stanford.edu) and David Golub (dgolub@cs.washington.edu)*
 
 This is an experimental project created for the CS 251P hackathon at Stanford University combining our interest in deep learning and cryptocurrencies. Using the 21 bitcoin micropayments ecosystem we wrap a bitcoin-payable endpoint around our deep learning models. 

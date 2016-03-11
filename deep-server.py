@@ -26,7 +26,7 @@ wallet = Wallet()
 payment = Payment(app, wallet)
 
 @app.route('/deep')
-@payment.required(1000)
+@payment.required(2500)
 def deep():
     print(request.get_data)
 
